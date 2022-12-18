@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./component/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('./component/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>This is assignment Blackcoffer</h1>
+        <p>How it work Through RestfulAPI 
+          <li>/- Home page</li> 
+          <li>/:id  -Post- Fetch specific data for pariticular id assign with</li> 
+          <li>/:id -Patch- Fetch specific data for pariticular id assign with</li> 
+          <li>/data/ -Get- Fetch all data from mongodb Database</li> 
+          <li>/graph - nodejs graph use </li>
+        </p>
+        <p>Tools Use <li>Html, Css, Js, Nodejs, RestfulAPI, Ejs, Express, Nodejs, Nodejs Charts And More...</li></p>
+    
+        <h2>Variable</h2>
+        <form action="data/" method="get">
+        <select class="btn btn-outline" aria-label="Default select example">
+          <option selected>Select Data To Fetch</option>
+          <% docs.forEach(function(data) { %>
+          <option value="<%= data.id %>"><a href="/<%= data.id %>"><%= data.id %></a></option>
+          <% }); %>
+        </select>
+
+        <form action="data/" method="get">
+          <select class="btn btn-outline" aria-label="Default select example">
+            <option selected>Select Data To Fetch</option>
+            <% docs.forEach(function(data) { %>
+            <option value="<%= data.id %>"><a href="/<%= data.id %>"><%= data.region %></a></option>
+            <% }); %>
+          </select>
+
+          <form action="data/" method="get">
+            <select class="btn btn-outline" aria-label="Default select example">
+              <option selected>Select Data To Fetch</option>
+              <% docs.forEach(function(data) { %>
+              <option value="<%= data.id %>"><a href="/<%= data.id %>"><%= data.end_year %></a></option>
+              <% }); %>
+            </select>
+
+            <form action="data/" method="get">
+              <select class="btn btn-outline" aria-label="Default select example">
+                <option selected>Select Data To Fetch</option>
+                <% docs.forEach(function(data) { %>
+                <option value="<%= data.id %>"><a href="/<%= data.id %>"><%= data.added %></a></option>
+                <% }); %>
+              </select>
+        <button type="submit" name="" class="btn btn-primary">check</button>
+      </form>
+
+</div>
+
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Topic</a>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Region</a>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Url</a>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Added</a>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Country</a>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample6" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Title</a>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample7" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Source</a>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        <div class="tab-pane show active" id="1a">
+          <% docs.forEach(function(data) { %>
+            <li>
+            <a href="/<%= data.id %>"><%= data.topic %></a>
+          </li>
+            <% }); %>
+
+				</div> </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        <div class="tab-pane show active" id="1a">
+          <% docs.forEach(function(data) { %>
+            <li>
+            <a href="/<%= data.id %>"><%= data.region %></a>
+          </li>
+            <% }); %>
+
+				</div> </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample3">
+      <div class="card card-body">
+        <div class="tab-pane show active" id="1a">
+          <% docs.forEach(function(data) { %>
+            <li>
+            <a href="/<%= data.id %>"><%= data.url %></a>
+          </li>
+            <% }); %>
+
+				</div> </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample4">
+      <div class="card card-body">
+        <div class="tab-pane show active" id="1a">
+          <% docs.forEach(function(data) { %>
+            <li>
+            <a href="/<%= data.id %>"><%= data.added %></a>
+          </li>
+            <% }); %>
+
+				</div> </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample5">
+      <div class="card card-body">
+        <div class="tab-pane show active" id="1a">
+          <% docs.forEach(function(data) { %>
+            <li>
+            <a href="/<%= data.id %>"><%= data.country %></a>
+          </li>
+            <% }); %>
+
+				</div> </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample6">
+      <div class="card card-body">
+        <div class="tab-pane show active" id="1a">
+          <% docs.forEach(function(data) { %>
+            <li>
+            <a href="/<%= data.id %>"><%= data.title %></a>
+          </li>
+            <% }); %>
+
+				</div> 
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample7">
+      <div class="card card-body">
+        <div class="tab-pane show active" id="1a">
+          <% docs.forEach(function(data) { %>
+            <li>
+            <a href="/<%= data.id %>"><%= data.source %></a>
+          </li>
+            <% }); %>
+
+				</div> 
+      </div>
+  </div>
+</div>
+
+			
+
+</main>
+
+<footer>
+  <%- include('./component/footer'); %>
+</footer>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</html>
